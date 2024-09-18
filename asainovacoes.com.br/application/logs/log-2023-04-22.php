@@ -1,0 +1,37 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2023-04-22 00:31:11 --> 404 Page Not Found: I8/index
+ERROR - 2023-04-22 00:39:37 --> 404 Page Not Found: %E4%BB%96%E3%81%AE%E4%BC%9A%E7%A4%BE%E3%81%AB%E6%97%A2%E3%81%AB%E6%9F%BB%E5%AE%9A%E3%81%97%E3%81%A6%E3%82%82%E3%82%89%E3%81%A3%E3%81%A6%E3%81%84%E3%81%BE%E3%81%99%E3%80%82%E3%81%9D%E3%81%A1%E3%82%89/index
+ERROR - 2023-04-22 01:11:56 --> 404 Page Not Found: Caree/index
+ERROR - 2023-04-22 01:18:18 --> 404 Page Not Found: Works/a30ecban07362_p_762238
+ERROR - 2023-04-22 04:51:24 --> 404 Page Not Found: Robotstxt/index
+ERROR - 2023-04-22 04:51:24 --> 404 Page Not Found: Projeto/curso_de_cabeleireiro_feminino
+ERROR - 2023-04-22 05:07:22 --> 404 Page Not Found: Projeto/curso_de_cabeleireiro_feminino
+ERROR - 2023-04-22 06:14:57 --> 404 Page Not Found: ~keisoueg/index
+ERROR - 2023-04-22 07:38:02 --> 404 Page Not Found: Robotstxt/index
+ERROR - 2023-04-22 07:38:08 --> 404 Page Not Found: Faviconico/index
+ERROR - 2023-04-22 08:41:56 --> 404 Page Not Found: Well_known/traffic_advice
+ERROR - 2023-04-22 08:46:00 --> 404 Page Not Found: %EF%BC%91%EF%BC%99%E3%80%81%E5%BA%83%E5%91%8A%E8%B2%BB%E3%81%AF%E8%87%AA%E5%88%86%E3%81%A7%E8%B2%A0%E6%8B%85%E3%81%97%E3%81%AA%E3%81%8F%E3%81%A6%E3%81%AF%E3%81%84%E3%81%91%E3%81%AA%E3%81%84%E3%82%93/index
+ERROR - 2023-04-22 09:18:29 --> 404 Page Not Found: Feed/index
+ERROR - 2023-04-22 09:50:53 --> 404 Page Not Found: Well_known/traffic_advice
+ERROR - 2023-04-22 10:04:24 --> 404 Page Not Found: Archive/index
+ERROR - 2023-04-22 10:06:23 --> 404 Page Not Found: Robotstxt/index
+ERROR - 2023-04-22 12:10:06 --> 404 Page Not Found: Delivery_agreement/index
+ERROR - 2023-04-22 13:11:52 --> 404 Page Not Found: Well_known/traffic_advice
+ERROR - 2023-04-22 16:35:20 --> 404 Page Not Found: Well_known/traffic_advice
+ERROR - 2023-04-22 16:42:38 --> 404 Page Not Found: Faviconico/index
+ERROR - 2023-04-22 16:42:39 --> 404 Page Not Found: Faviconico/index
+ERROR - 2023-04-22 20:52:58 --> 404 Page Not Found: Robotstxt/index
+ERROR - 2023-04-22 22:19:02 --> 404 Page Not Found: Wordpress/index
+ERROR - 2023-04-22 22:19:03 --> 404 Page Not Found: Wp/index
+ERROR - 2023-04-22 22:19:03 --> 404 Page Not Found: Bc/index
+ERROR - 2023-04-22 22:19:04 --> 404 Page Not Found: Bk/index
+ERROR - 2023-04-22 22:19:04 --> 404 Page Not Found: Backup/index
+ERROR - 2023-04-22 22:19:04 --> 404 Page Not Found: Old/index
+ERROR - 2023-04-22 22:19:04 --> 404 Page Not Found: New/index
+ERROR - 2023-04-22 22:19:05 --> 404 Page Not Found: Main/index
+ERROR - 2023-04-22 22:25:59 --> 404 Page Not Found: Robotstxt/index
+ERROR - 2023-04-22 22:26:08 --> 404 Page Not Found: Bone/index
+ERROR - 2023-04-22 22:45:07 --> 404 Page Not Found: Well_known/traffic_advice
+ERROR - 2023-04-22 22:57:19 --> 404 Page Not Found: Cafeyumo/index
+ERROR - 2023-04-22 23:34:40 --> 404 Page Not Found: Installphp/index

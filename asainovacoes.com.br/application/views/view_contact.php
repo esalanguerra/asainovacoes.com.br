@@ -54,6 +54,7 @@
             </div>
         </div>
         <div class="row">
+            
             <div class="col-12">
                 <div class="contact-form headstyle pt_90">
                     <h4><?php echo CONTACT_FORM; ?></h4>
@@ -90,6 +91,7 @@
                 </div>
             </div>
         </div>
+
     </div>
 </div>
 <!--Contact End-->

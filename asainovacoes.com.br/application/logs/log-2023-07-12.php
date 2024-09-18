@@ -1,0 +1,37 @@
+<?php defined('BASEPATH') OR exit('No direct script access allowed'); ?>
+
+ERROR - 2023-07-12 00:16:42 --> 404 Page Not Found: Shimonoisshikinishiki/index
+ERROR - 2023-07-12 01:52:23 --> 404 Page Not Found: Blog/904
+ERROR - 2023-07-12 02:55:21 --> 404 Page Not Found: Reform_kimura_teihtml/index
+ERROR - 2023-07-12 03:27:56 --> 404 Page Not Found: Robotstxt/index
+ERROR - 2023-07-12 03:49:36 --> 404 Page Not Found: Faviconico/index
+ERROR - 2023-07-12 04:20:28 --> 404 Page Not Found: Wordpress/index
+ERROR - 2023-07-12 04:20:28 --> 404 Page Not Found: Wp/index
+ERROR - 2023-07-12 04:20:28 --> 404 Page Not Found: Blog/index
+ERROR - 2023-07-12 04:20:28 --> 404 Page Not Found: New/index
+ERROR - 2023-07-12 04:20:28 --> 404 Page Not Found: Wordpress/index
+ERROR - 2023-07-12 04:20:28 --> 404 Page Not Found: Wp/index
+ERROR - 2023-07-12 04:20:28 --> 404 Page Not Found: Old/index
+ERROR - 2023-07-12 04:20:28 --> 404 Page Not Found: Blog/index
+ERROR - 2023-07-12 04:20:28 --> 404 Page Not Found: Test/index
+ERROR - 2023-07-12 04:20:28 --> 404 Page Not Found: New/index
+ERROR - 2023-07-12 04:20:29 --> 404 Page Not Found: Main/index
+ERROR - 2023-07-12 04:20:29 --> 404 Page Not Found: Old/index
+ERROR - 2023-07-12 04:20:29 --> 404 Page Not Found: Testing/index
+ERROR - 2023-07-12 04:20:29 --> 404 Page Not Found: Test/index
+ERROR - 2023-07-12 04:20:29 --> 404 Page Not Found: Main/index
+ERROR - 2023-07-12 04:20:29 --> 404 Page Not Found: Testing/index
+ERROR - 2023-07-12 04:39:09 --> 404 Page Not Found: Sitemap_indexxml/index
+ERROR - 2023-07-12 05:25:26 --> 404 Page Not Found: Nenkin_info/chat.html
+ERROR - 2023-07-12 05:38:11 --> 404 Page Not Found: Wordpress/index
+ERROR - 2023-07-12 05:38:22 --> 404 Page Not Found: Wp/index
+ERROR - 2023-07-12 05:38:29 --> 404 Page Not Found: Blog/index
+ERROR - 2023-07-12 05:38:40 --> 404 Page Not Found: Backup/index
+ERROR - 2023-07-12 05:38:50 --> 404 Page Not Found: Old/index
+ERROR - 2023-07-12 05:49:26 --> 404 Page Not Found: Sitemap_indexxml/index
+ERROR - 2023-07-12 05:58:36 --> 404 Page Not Found: Theory/chord
+ERROR - 2023-07-12 06:57:42 --> 404 Page Not Found: Biz/index
+ERROR - 2023-07-12 08:08:50 --> 404 Page Not Found: Faviconico/index
+ERROR - 2023-07-12 09:12:04 --> 404 Page Not Found: Well_known/traffic_advice
+ERROR - 2023-07-12 10:32:25 --> 404 Page Not Found: Edu/global
+ERROR - 2023-07-12 11:00:44 --> 404 Page Not Found: Mezase/index

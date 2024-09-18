@@ -9,7 +9,7 @@ services:
   site:
     build: ./asainovacoes.com.br
     ports:
-      - 8080:80
+      - 80:80
     volumes:
       - ./asainovacoes.com.br:/var/www/html
       - php-sessions:/var/www/html/sessions
@@ -20,9 +20,9 @@ services:
     image: mysql:5.7
     environment:
       MYSQL_ROOT_PASSWORD: root
-      MYSQL_DATABASE: asainovacoes
+      MYSQL_DATABASE: 'ecbane44_siteecba'
       MYSQL_USER: asainovacoes
-      MYSQL_PASSWORD: asainovacoes
+      MYSQL_PASSWORD: 'Sistema@ASA01'
     ports:
       - 3306:3306
     volumes:
