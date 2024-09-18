@@ -24,7 +24,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 |
 */
 date_default_timezone_set('America/New_York');
-$config['base_url'] = 'https://ecba.net.br/';
+$config['base_url'] = 'http://localhost/';
 
 /*
 |--------------------------------------------------------------------------

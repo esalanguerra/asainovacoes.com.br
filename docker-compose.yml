@@ -7,11 +7,11 @@ volumes:
 
 services:
   site:
-    build: ./asainovacoes.com.br
+    build: ./
     ports:
       - 80:80
     volumes:
-      - ./asainovacoes.com.br:/var/www/html
+      - ./:/var/www/html
       - php-sessions:/var/www/html/sessions
     depends_on:
       - database
