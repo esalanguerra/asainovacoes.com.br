@@ -2,6 +2,9 @@ volumes:
   database:
     driver: local
 
+  php-sessions:
+    driver: local
+
 services:
   site:
     build: ./asainovacoes.com.br
@@ -9,6 +12,7 @@ services:
       - 8080:80
     volumes:
       - ./asainovacoes.com.br:/var/www/html
+      - php-sessions:/var/www/html/sessions
     depends_on:
       - database
 
