@@ -1,0 +1,33 @@
+volumes:
+  database:
+    driver: local
+
+services:
+  site:
+    build: ./asainovacoes.com.br
+    ports:
+      - 8080:80
+    volumes:
+      - ./asainovacoes.com.br:/var/www/html
+    depends_on:
+      - database
+
+  database:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: asainovacoes
+      MYSQL_USER: asainovacoes
+      MYSQL_PASSWORD: asainovacoes
+    ports:
+      - 3306:3306
+    volumes:
+      - database:/var/lib/mysql
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    environment:
+      PMA_HOST: database
+      PMA_PORT: 3306
+    ports:
+      - 8081:80
