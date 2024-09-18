@@ -75,10 +75,10 @@ $query_builder = TRUE;
 
 $db['default'] = array(
 	'dsn'	=> '',
-	'hostname' => 'localhost',
-	'username' => 'sotero02_admin',
-	'password' => 'Quick*2019',
-	'database' => 'sotero02_multix',
+	'hostname' => 'database',
+	'username' => 'asainovacoes',
+	'password' => 'asainovacoes',
+	'database' => 'asainovacoes',
 	'dbdriver' => 'mysqli',
 	'dbprefix' => '',
 	'pconnect' => FALSE,
