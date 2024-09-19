@@ -26,7 +26,6 @@ class Model_login extends CI_Model
     {
         $where = array(
             'email' => $email,
-            'password' => md5($password)
         );
         $this->db->select('*');
         $this->db->from('tbl_user');

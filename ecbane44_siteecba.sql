@@ -30,9 +30,9 @@ SET time_zone = "+00:00";
 
 CREATE TABLE `tbl_category` (
   `category_id` int(11) NOT NULL,
-  `category_name` varchar(255) NOT NULL,
-  `category_banner` varchar(255) NOT NULL,
-  `meta_title` varchar(255) NOT NULL,
+  `category_name` text NOT NULL,
+  `category_banner` text NOT NULL,
+  `meta_title` text NOT NULL,
   `meta_keyword` text NOT NULL,
   `meta_description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -55,9 +55,9 @@ INSERT INTO `tbl_category` (`category_id`, `category_name`, `category_banner`, `
 
 CREATE TABLE `tbl_client` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `url` varchar(255) NOT NULL,
-  `photo` varchar(255) NOT NULL
+  `name` text NOT NULL,
+  `url` text NOT NULL,
+  `photo` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -97,16 +97,16 @@ INSERT INTO `tbl_comment` (`id`, `code_body`, `code_main`) VALUES
 
 CREATE TABLE `tbl_event` (
   `event_id` int(11) NOT NULL,
-  `event_title` varchar(255) NOT NULL,
+  `event_title` text NOT NULL,
   `event_content` text NOT NULL,
   `event_content_short` text NOT NULL,
   `event_start_date` varchar(10) NOT NULL,
   `event_end_date` varchar(10) NOT NULL,
   `event_location` text NOT NULL,
   `event_map` text NOT NULL,
-  `photo` varchar(255) NOT NULL,
-  `banner` varchar(255) NOT NULL,
-  `meta_title` varchar(255) NOT NULL,
+  `photo` text NOT NULL,
+  `banner` text NOT NULL,
+  `meta_title` text NOT NULL,
   `meta_keyword` text NOT NULL,
   `meta_description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -131,7 +131,7 @@ INSERT INTO `tbl_event` (`event_id`, `event_title`, `event_content`, `event_cont
 
 CREATE TABLE `tbl_faq` (
   `faq_id` int(11) NOT NULL,
-  `faq_title` varchar(255) NOT NULL,
+  `faq_title` text NOT NULL,
   `faq_content` text NOT NULL,
   `show_on_home` varchar(3) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -156,9 +156,9 @@ INSERT INTO `tbl_faq` (`faq_id`, `faq_title`, `faq_content`, `show_on_home`) VAL
 
 CREATE TABLE `tbl_feature` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
+  `name` text NOT NULL,
   `content` text NOT NULL,
-  `icon` varchar(255) NOT NULL
+  `icon` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -245,15 +245,15 @@ INSERT INTO `tbl_language` (`id`, `name`, `value`) VALUES
 
 CREATE TABLE `tbl_news` (
   `news_id` int(11) NOT NULL,
-  `news_title` varchar(255) NOT NULL,
+  `news_title` text NOT NULL,
   `news_content` text NOT NULL,
   `news_content_short` text NOT NULL,
-  `news_date` varchar(255) NOT NULL,
-  `photo` varchar(255) NOT NULL,
-  `banner` varchar(255) NOT NULL,
+  `news_date` text NOT NULL,
+  `photo` text NOT NULL,
+  `banner` text NOT NULL,
   `category_id` int(11) NOT NULL,
   `comment` varchar(3) NOT NULL,
-  `meta_title` varchar(255) NOT NULL,
+  `meta_title` text NOT NULL,
   `meta_keyword` text NOT NULL,
   `meta_description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -274,9 +274,9 @@ INSERT INTO `tbl_news` (`news_id`, `news_title`, `news_content`, `news_content_s
 
 CREATE TABLE `tbl_page_about` (
   `id` int(11) NOT NULL,
-  `about_heading` varchar(255) NOT NULL,
+  `about_heading` text NOT NULL,
   `about_content` text NOT NULL,
-  `mt_about` varchar(255) NOT NULL,
+  `mt_about` text NOT NULL,
   `mk_about` text NOT NULL,
   `md_about` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -296,12 +296,12 @@ INSERT INTO `tbl_page_about` (`id`, `about_heading`, `about_content`, `mt_about`
 
 CREATE TABLE `tbl_page_contact` (
   `id` int(11) NOT NULL,
-  `contact_heading` varchar(255) NOT NULL,
+  `contact_heading` text NOT NULL,
   `contact_address` text NOT NULL,
   `contact_email` text NOT NULL,
   `contact_phone` text NOT NULL,
   `contact_map` text NOT NULL,
-  `mt_contact` varchar(255) NOT NULL,
+  `mt_contact` text NOT NULL,
   `mk_contact` text NOT NULL,
   `md_contact` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -321,8 +321,8 @@ INSERT INTO `tbl_page_contact` (`id`, `contact_heading`, `contact_address`, `con
 
 CREATE TABLE `tbl_page_event` (
   `id` int(11) NOT NULL,
-  `event_heading` varchar(255) NOT NULL,
-  `mt_event` varchar(255) NOT NULL,
+  `event_heading` text NOT NULL,
+  `mt_event` text NOT NULL,
   `mk_event` text NOT NULL,
   `md_event` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -342,8 +342,8 @@ INSERT INTO `tbl_page_event` (`id`, `event_heading`, `mt_event`, `mk_event`, `md
 
 CREATE TABLE `tbl_page_faq` (
   `id` int(11) NOT NULL,
-  `faq_heading` varchar(255) NOT NULL,
-  `mt_faq` varchar(255) NOT NULL,
+  `faq_heading` text NOT NULL,
+  `mt_faq` text NOT NULL,
   `mk_faq` text NOT NULL,
   `md_faq` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -363,72 +363,72 @@ INSERT INTO `tbl_page_faq` (`id`, `faq_heading`, `mt_faq`, `mk_faq`, `md_faq`) V
 
 CREATE TABLE `tbl_page_home` (
   `id` int(11) NOT NULL,
-  `title` varchar(255) NOT NULL,
+  `title` text NOT NULL,
   `meta_keyword` text NOT NULL,
   `meta_description` text NOT NULL,
-  `home_welcome_title` varchar(255) NOT NULL,
-  `home_welcome_subtitle` varchar(255) NOT NULL,
+  `home_welcome_title` text NOT NULL,
+  `home_welcome_subtitle` text NOT NULL,
   `home_welcome_text` text NOT NULL,
   `home_welcome_video` text NOT NULL,
-  `home_welcome_pbar1_text` varchar(255) NOT NULL,
+  `home_welcome_pbar1_text` text NOT NULL,
   `home_welcome_pbar1_value` varchar(10) NOT NULL,
-  `home_welcome_pbar2_text` varchar(255) NOT NULL,
+  `home_welcome_pbar2_text` text NOT NULL,
   `home_welcome_pbar2_value` varchar(10) NOT NULL,
-  `home_welcome_pbar3_text` varchar(255) NOT NULL,
+  `home_welcome_pbar3_text` text NOT NULL,
   `home_welcome_pbar3_value` varchar(10) NOT NULL,
-  `home_welcome_pbar4_text` varchar(255) NOT NULL,
+  `home_welcome_pbar4_text` text NOT NULL,
   `home_welcome_pbar4_value` varchar(10) NOT NULL,
-  `home_welcome_pbar5_text` varchar(255) NOT NULL,
+  `home_welcome_pbar5_text` text NOT NULL,
   `home_welcome_pbar5_value` varchar(10) NOT NULL,
   `home_welcome_status` varchar(5) NOT NULL,
-  `home_welcome_video_bg` varchar(255) NOT NULL,
-  `home_why_choose_title` varchar(255) NOT NULL,
-  `home_why_choose_subtitle` varchar(255) NOT NULL,
+  `home_welcome_video_bg` text NOT NULL,
+  `home_why_choose_title` text NOT NULL,
+  `home_why_choose_subtitle` text NOT NULL,
   `home_why_choose_status` varchar(5) NOT NULL,
-  `home_feature_title` varchar(255) NOT NULL,
-  `home_feature_subtitle` varchar(255) NOT NULL,
+  `home_feature_title` text NOT NULL,
+  `home_feature_subtitle` text NOT NULL,
   `home_feature_status` varchar(5) NOT NULL,
-  `home_service_title` varchar(255) NOT NULL,
-  `home_service_subtitle` varchar(255) NOT NULL,
+  `home_service_title` text NOT NULL,
+  `home_service_subtitle` text NOT NULL,
   `home_service_status` varchar(5) NOT NULL,
-  `counter_1_title` varchar(255) NOT NULL,
+  `counter_1_title` text NOT NULL,
   `counter_1_value` varchar(10) NOT NULL,
   `counter_1_icon` varchar(50) NOT NULL,
-  `counter_2_title` varchar(255) NOT NULL,
+  `counter_2_title` text NOT NULL,
   `counter_2_value` varchar(10) NOT NULL,
   `counter_2_icon` varchar(50) NOT NULL,
-  `counter_3_title` varchar(255) NOT NULL,
+  `counter_3_title` text NOT NULL,
   `counter_3_value` varchar(10) NOT NULL,
   `counter_3_icon` varchar(50) NOT NULL,
-  `counter_4_title` varchar(255) NOT NULL,
+  `counter_4_title` text NOT NULL,
   `counter_4_value` varchar(10) NOT NULL,
   `counter_4_icon` varchar(50) NOT NULL,
-  `counter_photo` varchar(255) NOT NULL,
+  `counter_photo` text NOT NULL,
   `counter_status` varchar(10) NOT NULL,
-  `home_portfolio_title` varchar(255) NOT NULL,
-  `home_portfolio_subtitle` varchar(255) NOT NULL,
+  `home_portfolio_title` text NOT NULL,
+  `home_portfolio_subtitle` text NOT NULL,
   `home_portfolio_status` varchar(5) NOT NULL,
-  `home_booking_form_title` varchar(255) NOT NULL,
-  `home_booking_faq_title` varchar(255) NOT NULL,
+  `home_booking_form_title` text NOT NULL,
+  `home_booking_faq_title` text NOT NULL,
   `home_booking_status` varchar(5) NOT NULL,
-  `home_booking_photo` varchar(255) NOT NULL,
-  `home_team_title` varchar(255) NOT NULL,
-  `home_team_subtitle` varchar(255) NOT NULL,
+  `home_booking_photo` text NOT NULL,
+  `home_team_title` text NOT NULL,
+  `home_team_subtitle` text NOT NULL,
   `home_team_status` varchar(5) NOT NULL,
-  `home_ptable_title` varchar(255) NOT NULL,
-  `home_ptable_subtitle` varchar(255) NOT NULL,
+  `home_ptable_title` text NOT NULL,
+  `home_ptable_subtitle` text NOT NULL,
   `home_ptable_status` varchar(5) NOT NULL,
-  `home_testimonial_title` varchar(255) NOT NULL,
-  `home_testimonial_subtitle` varchar(255) NOT NULL,
-  `home_testimonial_photo` varchar(255) NOT NULL,
+  `home_testimonial_title` text NOT NULL,
+  `home_testimonial_subtitle` text NOT NULL,
+  `home_testimonial_photo` text NOT NULL,
   `home_testimonial_status` varchar(5) NOT NULL,
-  `home_blog_title` varchar(255) NOT NULL,
-  `home_blog_subtitle` varchar(255) NOT NULL,
+  `home_blog_title` text NOT NULL,
+  `home_blog_subtitle` text NOT NULL,
   `home_blog_item` varchar(5) NOT NULL,
   `home_blog_status` varchar(5) NOT NULL,
   `home_cta_text` text NOT NULL,
-  `home_cta_button_text` varchar(255) NOT NULL,
-  `home_cta_button_url` varchar(255) NOT NULL
+  `home_cta_button_text` text NOT NULL,
+  `home_cta_button_url` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -446,8 +446,8 @@ INSERT INTO `tbl_page_home` (`id`, `title`, `meta_keyword`, `meta_description`, 
 
 CREATE TABLE `tbl_page_news` (
   `id` int(11) NOT NULL,
-  `news_heading` varchar(255) NOT NULL,
-  `mt_news` varchar(255) NOT NULL,
+  `news_heading` text NOT NULL,
+  `mt_news` text NOT NULL,
   `mk_news` text NOT NULL,
   `md_news` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -467,8 +467,8 @@ INSERT INTO `tbl_page_news` (`id`, `news_heading`, `mt_news`, `mk_news`, `md_new
 
 CREATE TABLE `tbl_page_photo_gallery` (
   `id` int(11) NOT NULL,
-  `photo_gallery_heading` varchar(255) NOT NULL,
-  `mt_photo_gallery` varchar(255) NOT NULL,
+  `photo_gallery_heading` text NOT NULL,
+  `mt_photo_gallery` text NOT NULL,
   `mk_photo_gallery` text NOT NULL,
   `md_photo_gallery` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -488,8 +488,8 @@ INSERT INTO `tbl_page_photo_gallery` (`id`, `photo_gallery_heading`, `mt_photo_g
 
 CREATE TABLE `tbl_page_portfolio` (
   `id` int(11) NOT NULL,
-  `portfolio_heading` varchar(255) NOT NULL,
-  `mt_portfolio` varchar(255) NOT NULL,
+  `portfolio_heading` text NOT NULL,
+  `mt_portfolio` text NOT NULL,
   `mk_portfolio` text NOT NULL,
   `md_portfolio` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -509,8 +509,8 @@ INSERT INTO `tbl_page_portfolio` (`id`, `portfolio_heading`, `mt_portfolio`, `mk
 
 CREATE TABLE `tbl_page_pricing` (
   `id` int(11) NOT NULL,
-  `pricing_heading` varchar(255) NOT NULL,
-  `mt_pricing` varchar(255) NOT NULL,
+  `pricing_heading` text NOT NULL,
+  `mt_pricing` text NOT NULL,
   `mk_pricing` text NOT NULL,
   `md_pricing` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -530,9 +530,9 @@ INSERT INTO `tbl_page_pricing` (`id`, `pricing_heading`, `mt_pricing`, `mk_prici
 
 CREATE TABLE `tbl_page_privacy` (
   `id` int(11) NOT NULL,
-  `privacy_heading` varchar(255) NOT NULL,
+  `privacy_heading` text NOT NULL,
   `privacy_content` text NOT NULL,
-  `mt_privacy` varchar(255) NOT NULL,
+  `mt_privacy` text NOT NULL,
   `mk_privacy` text NOT NULL,
   `md_privacy` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -552,8 +552,8 @@ INSERT INTO `tbl_page_privacy` (`id`, `privacy_heading`, `privacy_content`, `mt_
 
 CREATE TABLE `tbl_page_search` (
   `id` int(11) NOT NULL,
-  `search_heading` varchar(255) NOT NULL,
-  `mt_search` varchar(255) NOT NULL,
+  `search_heading` text NOT NULL,
+  `mt_search` text NOT NULL,
   `mk_search` text NOT NULL,
   `md_search` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -573,8 +573,8 @@ INSERT INTO `tbl_page_search` (`id`, `search_heading`, `mt_search`, `mk_search`,
 
 CREATE TABLE `tbl_page_service` (
   `id` int(11) NOT NULL,
-  `service_heading` varchar(255) NOT NULL,
-  `mt_service` varchar(255) NOT NULL,
+  `service_heading` text NOT NULL,
+  `mt_service` text NOT NULL,
   `mk_service` text NOT NULL,
   `md_service` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -594,8 +594,8 @@ INSERT INTO `tbl_page_service` (`id`, `service_heading`, `mt_service`, `mk_servi
 
 CREATE TABLE `tbl_page_team` (
   `id` int(11) NOT NULL,
-  `team_heading` varchar(255) NOT NULL,
-  `mt_team` varchar(255) NOT NULL,
+  `team_heading` text NOT NULL,
+  `mt_team` text NOT NULL,
   `mk_team` text NOT NULL,
   `md_team` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -615,9 +615,9 @@ INSERT INTO `tbl_page_team` (`id`, `team_heading`, `mt_team`, `mk_team`, `md_tea
 
 CREATE TABLE `tbl_page_term` (
   `id` int(11) NOT NULL,
-  `term_heading` varchar(255) NOT NULL,
+  `term_heading` text NOT NULL,
   `term_content` text NOT NULL,
-  `mt_term` varchar(255) NOT NULL,
+  `mt_term` text NOT NULL,
   `mk_term` text NOT NULL,
   `md_term` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -637,8 +637,8 @@ INSERT INTO `tbl_page_term` (`id`, `term_heading`, `term_content`, `mt_term`, `m
 
 CREATE TABLE `tbl_page_testimonial` (
   `id` int(11) NOT NULL,
-  `testimonial_heading` varchar(255) NOT NULL,
-  `mt_testimonial` varchar(255) NOT NULL,
+  `testimonial_heading` text NOT NULL,
+  `mt_testimonial` text NOT NULL,
   `mk_testimonial` text NOT NULL,
   `md_testimonial` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -658,7 +658,7 @@ INSERT INTO `tbl_page_testimonial` (`id`, `testimonial_heading`, `mt_testimonial
 
 CREATE TABLE `tbl_photo` (
   `photo_id` int(11) NOT NULL,
-  `photo_name` varchar(255) NOT NULL
+  `photo_name` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -681,19 +681,19 @@ INSERT INTO `tbl_photo` (`photo_id`, `photo_name`) VALUES
 
 CREATE TABLE `tbl_portfolio` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
+  `name` text NOT NULL,
   `short_content` text NOT NULL,
   `content` text NOT NULL,
-  `client_name` varchar(255) NOT NULL,
-  `client_company` varchar(255) NOT NULL,
+  `client_name` text NOT NULL,
+  `client_company` text NOT NULL,
   `start_date` varchar(50) NOT NULL,
   `end_date` varchar(50) NOT NULL,
-  `website` varchar(255) NOT NULL,
+  `website` text NOT NULL,
   `cost` varchar(50) NOT NULL,
   `client_comment` text NOT NULL,
-  `category_id` varchar(255) NOT NULL,
-  `photo` varchar(255) NOT NULL,
-  `meta_title` varchar(255) NOT NULL,
+  `category_id` text NOT NULL,
+  `photo` text NOT NULL,
+  `meta_title` text NOT NULL,
   `meta_keyword` text NOT NULL,
   `meta_description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -734,7 +734,7 @@ INSERT INTO `tbl_portfolio` (`id`, `name`, `short_content`, `content`, `client_n
 
 CREATE TABLE `tbl_portfolio_category` (
   `category_id` int(11) NOT NULL,
-  `category_name` varchar(255) NOT NULL,
+  `category_name` text NOT NULL,
   `status` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -758,7 +758,7 @@ INSERT INTO `tbl_portfolio_category` (`category_id`, `category_name`, `status`) 
 CREATE TABLE `tbl_portfolio_photo` (
   `id` int(11) NOT NULL,
   `portfolio_id` int(11) NOT NULL,
-  `photo` varchar(255) NOT NULL
+  `photo` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -789,13 +789,13 @@ INSERT INTO `tbl_portfolio_photo` (`id`, `portfolio_id`, `photo`) VALUES
 
 CREATE TABLE `tbl_pricing_table` (
   `id` int(11) NOT NULL,
-  `icon` varchar(255) NOT NULL,
-  `title` varchar(255) NOT NULL,
-  `price` varchar(255) NOT NULL,
-  `subtitle` varchar(255) NOT NULL,
+  `icon` text NOT NULL,
+  `title` text NOT NULL,
+  `price` text NOT NULL,
+  `subtitle` text NOT NULL,
   `text` text NOT NULL,
-  `button_text` varchar(255) NOT NULL,
-  `button_url` varchar(255) NOT NULL
+  `button_text` text NOT NULL,
+  `button_url` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -815,11 +815,11 @@ INSERT INTO `tbl_pricing_table` (`id`, `icon`, `title`, `price`, `subtitle`, `te
 
 CREATE TABLE `tbl_service` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
+  `name` text NOT NULL,
   `description` text NOT NULL,
   `short_description` text NOT NULL,
-  `photo` varchar(255) NOT NULL,
-  `meta_title` varchar(255) NOT NULL,
+  `photo` text NOT NULL,
+  `meta_title` text NOT NULL,
   `meta_keyword` text NOT NULL,
   `meta_description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -863,12 +863,12 @@ INSERT INTO `tbl_service` (`id`, `name`, `description`, `short_description`, `ph
 
 CREATE TABLE `tbl_settings` (
   `id` int(11) NOT NULL,
-  `logo` varchar(255) NOT NULL,
-  `favicon` varchar(255) NOT NULL,
-  `footer_col1_title` varchar(255) NOT NULL,
-  `footer_col2_title` varchar(255) NOT NULL,
-  `footer_col3_title` varchar(255) NOT NULL,
-  `footer_col4_title` varchar(255) NOT NULL,
+  `logo` text NOT NULL,
+  `favicon` text NOT NULL,
+  `footer_col1_title` text NOT NULL,
+  `footer_col2_title` text NOT NULL,
+  `footer_col3_title` text NOT NULL,
+  `footer_col4_title` text NOT NULL,
   `footer_copyright` text NOT NULL,
   `footer_address` text NOT NULL,
   `footer_email` text NOT NULL,
@@ -877,40 +877,40 @@ CREATE TABLE `tbl_settings` (
   `footer_recent_portfolio_item` varchar(5) NOT NULL,
   `newsletter_text` text NOT NULL,
   `cta_text` text NOT NULL,
-  `cta_button_text` varchar(255) NOT NULL,
-  `cta_button_url` varchar(255) NOT NULL,
-  `cta_background` varchar(255) NOT NULL,
-  `top_bar_email` varchar(255) NOT NULL,
-  `top_bar_phone` varchar(255) NOT NULL,
-  `send_email_from` varchar(255) NOT NULL,
-  `receive_email_to` varchar(255) NOT NULL,
-  `banner_about` varchar(255) NOT NULL,
-  `banner_faq` varchar(255) NOT NULL,
-  `banner_service` varchar(255) NOT NULL,
-  `banner_testimonial` varchar(255) NOT NULL,
-  `banner_news` varchar(255) NOT NULL,
-  `banner_event` varchar(255) NOT NULL,
-  `banner_contact` varchar(255) NOT NULL,
-  `banner_search` varchar(255) NOT NULL,
-  `banner_terms` varchar(255) NOT NULL,
-  `banner_privacy` varchar(255) NOT NULL,
-  `banner_team` varchar(255) NOT NULL,
-  `banner_portfolio` varchar(255) NOT NULL,
-  `banner_verify_subscriber` varchar(255) NOT NULL,
-  `banner_pricing` varchar(255) NOT NULL,
-  `banner_photo_gallery` varchar(255) NOT NULL,
+  `cta_button_text` text NOT NULL,
+  `cta_button_url` text NOT NULL,
+  `cta_background` text NOT NULL,
+  `top_bar_email` text NOT NULL,
+  `top_bar_phone` text NOT NULL,
+  `send_email_from` text NOT NULL,
+  `receive_email_to` text NOT NULL,
+  `banner_about` text NOT NULL,
+  `banner_faq` text NOT NULL,
+  `banner_service` text NOT NULL,
+  `banner_testimonial` text NOT NULL,
+  `banner_news` text NOT NULL,
+  `banner_event` text NOT NULL,
+  `banner_contact` text NOT NULL,
+  `banner_search` text NOT NULL,
+  `banner_terms` text NOT NULL,
+  `banner_privacy` text NOT NULL,
+  `banner_team` text NOT NULL,
+  `banner_portfolio` text NOT NULL,
+  `banner_verify_subscriber` text NOT NULL,
+  `banner_pricing` text NOT NULL,
+  `banner_photo_gallery` text NOT NULL,
   `front_end_color` varchar(20) NOT NULL,
   `sidebar_total_recent_post` varchar(5) NOT NULL,
   `sidebar_total_upcoming_event` varchar(5) NOT NULL,
   `sidebar_total_past_event` varchar(5) NOT NULL,
-  `sidebar_news_heading_category` varchar(255) NOT NULL,
-  `sidebar_news_heading_recent_post` varchar(255) NOT NULL,
-  `sidebar_event_heading_upcoming` varchar(255) NOT NULL,
-  `sidebar_event_heading_past` varchar(255) NOT NULL,
-  `sidebar_service_heading_service` varchar(255) NOT NULL,
-  `sidebar_service_heading_quick_contact` varchar(255) NOT NULL,
-  `sidebar_portfolio_heading_project_detail` varchar(255) NOT NULL,
-  `sidebar_portfolio_heading_quick_contact` varchar(255) NOT NULL
+  `sidebar_news_heading_category` text NOT NULL,
+  `sidebar_news_heading_recent_post` text NOT NULL,
+  `sidebar_event_heading_upcoming` text NOT NULL,
+  `sidebar_event_heading_past` text NOT NULL,
+  `sidebar_service_heading_service` text NOT NULL,
+  `sidebar_service_heading_quick_contact` text NOT NULL,
+  `sidebar_portfolio_heading_project_detail` text NOT NULL,
+  `sidebar_portfolio_heading_quick_contact` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -928,13 +928,13 @@ INSERT INTO `tbl_settings` (`id`, `logo`, `favicon`, `footer_col1_title`, `foote
 
 CREATE TABLE `tbl_slider` (
   `id` int(11) NOT NULL,
-  `photo` varchar(255) NOT NULL,
-  `heading` varchar(255) NOT NULL,
-  `content` varchar(255) NOT NULL,
-  `button1_text` varchar(255) NOT NULL,
-  `button1_url` varchar(255) NOT NULL,
-  `button2_text` varchar(255) NOT NULL,
-  `button2_url` varchar(255) NOT NULL,
+  `photo` text NOT NULL,
+  `heading` text NOT NULL,
+  `content` text NOT NULL,
+  `button1_text` text NOT NULL,
+  `button1_url` text NOT NULL,
+  `button2_text` text NOT NULL,
+  `button2_url` text NOT NULL,
   `position` varchar(5) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -968,7 +968,7 @@ INSERT INTO `tbl_slider` (`id`, `photo`, `heading`, `content`, `button1_text`, `
 CREATE TABLE `tbl_social` (
   `social_id` int(11) NOT NULL,
   `social_name` varchar(30) NOT NULL,
-  `social_url` varchar(255) NOT NULL,
+  `social_url` text NOT NULL,
   `social_icon` varchar(30) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -1002,10 +1002,10 @@ INSERT INTO `tbl_social` (`social_id`, `social_name`, `social_url`, `social_icon
 
 CREATE TABLE `tbl_subscriber` (
   `subs_id` int(11) NOT NULL,
-  `subs_email` varchar(255) NOT NULL,
+  `subs_email` text NOT NULL,
   `subs_date` varchar(100) NOT NULL,
   `subs_date_time` varchar(100) NOT NULL,
-  `subs_hash` varchar(255) NOT NULL,
+  `subs_hash` text NOT NULL,
   `subs_active` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -1046,21 +1046,21 @@ INSERT INTO `tbl_subscriber` (`subs_id`, `subs_email`, `subs_date`, `subs_date_t
 
 CREATE TABLE `tbl_team_member` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
+  `name` text NOT NULL,
   `designation` varchar(100) NOT NULL,
-  `photo` varchar(255) NOT NULL,
+  `photo` text NOT NULL,
   `detail` text NOT NULL,
-  `facebook` varchar(255) NOT NULL,
-  `twitter` varchar(255) NOT NULL,
-  `linkedin` varchar(255) NOT NULL,
-  `youtube` varchar(255) NOT NULL,
-  `google_plus` varchar(255) NOT NULL,
-  `instagram` varchar(255) NOT NULL,
-  `flickr` varchar(255) NOT NULL,
+  `facebook` text NOT NULL,
+  `twitter` text NOT NULL,
+  `linkedin` text NOT NULL,
+  `youtube` text NOT NULL,
+  `google_plus` text NOT NULL,
+  `instagram` text NOT NULL,
+  `flickr` text NOT NULL,
   `phone` varchar(100) NOT NULL,
   `email` varchar(100) NOT NULL,
   `website` varchar(100) NOT NULL,
-  `meta_title` varchar(255) NOT NULL,
+  `meta_title` text NOT NULL,
   `meta_keyword` text NOT NULL,
   `meta_description` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -1082,9 +1082,9 @@ INSERT INTO `tbl_team_member` (`id`, `name`, `designation`, `photo`, `detail`, `
 
 CREATE TABLE `tbl_testimonial` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
-  `designation` varchar(255) NOT NULL,
-  `photo` varchar(255) NOT NULL,
+  `name` text NOT NULL,
+  `designation` text NOT NULL,
+  `photo` text NOT NULL,
   `comment` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -1105,10 +1105,10 @@ INSERT INTO `tbl_testimonial` (`id`, `name`, `designation`, `photo`, `comment`) 
 
 CREATE TABLE `tbl_user` (
   `id` int(10) NOT NULL,
-  `email` varchar(255) NOT NULL,
-  `password` varchar(255) NOT NULL,
-  `photo` varchar(255) NOT NULL,
-  `token` varchar(255) NOT NULL,
+  `email` text NOT NULL,
+  `password` text NOT NULL,
+  `photo` text NOT NULL,
+  `token` text NOT NULL,
   `role` varchar(30) NOT NULL,
   `status` varchar(10) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -1118,7 +1118,8 @@ CREATE TABLE `tbl_user` (
 --
 
 INSERT INTO `tbl_user` (`id`, `email`, `password`, `photo`, `token`, `role`, `status`) VALUES
-(1, 'consultoria.ecba@hotmail.com', '589288f593aa5466dbef208f1d7125c4', 'user-.png', 'b4fa6f1d3bacb03b184a1b4d4c467765', 'Admin', 'Active');
+(1, 'consultoria.ecba@hotmail.com', '589288f593aa5466dbef208f1d7125c4', 'user-.png', 'b4fa6f1d3bacb03b184a1b4d4c467765', 'Admin', 'Active'),
+(2, 'soaresgustavo07@hotmail.com', '589288f593aa5466dbef208f1d7125c4', 'user-.png', 'b4fa6f1d3bacb03b184a1b4d4c467765', 'Admin', 'Active');
 
 -- --------------------------------------------------------
 
@@ -1128,10 +1129,10 @@ INSERT INTO `tbl_user` (`id`, `email`, `password`, `photo`, `token`, `role`, `st
 
 CREATE TABLE `tbl_why_choose` (
   `id` int(11) NOT NULL,
-  `name` varchar(255) NOT NULL,
+  `name` text NOT NULL,
   `content` text NOT NULL,
   `icon` varchar(50) NOT NULL,
-  `photo` varchar(255) NOT NULL
+  `photo` text NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
